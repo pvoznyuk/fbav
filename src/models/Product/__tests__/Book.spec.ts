@@ -1,0 +1,27 @@
+import Book from '../Book'
+import { ProductType } from '../Product'
+import PhysicalProduct from '../PhysicalProduct'
+
+describe('Book', () => {
+	let book: Book
+
+	beforeEach(() => {
+		book = new Book('1', 'The Hobbit', 10.0)
+	})
+
+	it('should have a title', () => {
+		expect(book.name).toBe('The Hobbit')
+	})
+
+	it('should be an instance of PhysicalProduct', () => {
+		expect(book).toBeInstanceOf(PhysicalProduct)
+	})
+
+	it('should be a physical product', () => {
+		expect(book.isPhysical).toBeTruthy()
+	})
+
+	it('should have a book product type', () => {
+		expect(book.productType).toBe(ProductType.BOOK)
+	})
+})
