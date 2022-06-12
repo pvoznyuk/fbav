@@ -25,7 +25,7 @@ describe('PurchaseOrder', () => {
 		customer = new Customer('uid', 'Jorge Luis Borges', [], mockProducts)
 		purchaseOrder = new PurchaseOrder(
 			customer.id,
-			customer.basket.totalPrice,
+			customer.basket.totalPrice(),
 			[
 				'Book "Alice in Wonderland"',
 				'Book "The Hobbit"',
@@ -44,7 +44,7 @@ describe('PurchaseOrder', () => {
 	})
 
 	it('should have a total price', () => {
-		expect(purchaseOrder.totalPrice).toBe(customer.basket.totalPrice)
+		expect(purchaseOrder.totalPrice).toBe(customer.basket.totalPrice())
 	})
 
 	it('should have a list of items', () => {

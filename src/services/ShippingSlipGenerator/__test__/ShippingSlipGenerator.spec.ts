@@ -1,6 +1,6 @@
-import Product from '../../models/Product/Product'
-import Customer from '../../models/Customer/Customer'
-import Book from '../../models/Product/Book'
+import Product from '../../../models/Product/Product'
+import Customer from '../../../models/Customer/Customer'
+import Book from '../../../models/Product/Book'
 import ShippingSlipGenerator from '../ShippingSlipGenerator'
 
 describe('ShippingSlipGenerator', () => {

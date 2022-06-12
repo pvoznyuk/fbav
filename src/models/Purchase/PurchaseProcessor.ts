@@ -1,5 +1,5 @@
 import Customer from '../Customer/Customer'
-import ShippingSlipGenerator from '../../services/ShippingSlipGenerator'
+import ShippingSlipGenerator from '../../services/ShippingSlipGenerator/ShippingSlipGenerator'
 import PurchaseOrder from './PurchaseOrder'
 import MembershipActivatorProcessor from './ProcessorMiddleware/MembershipActivatorProcessor'
 import ShippingSlipProcessor from './ProcessorMiddleware/ShippingSlipProcessor'
@@ -36,7 +36,7 @@ export default class PurchaseProcessor {
 
 		const purchaseOrder = new PurchaseOrder(
 			this.customer.id,
-			this.customer.basket.totalPrice,
+			this.customer.basket.totalPrice(),
 			this.customer.basket.products.map(
 				(item) => `${item.productType} "${item.name}"`
 			)
@@ -45,6 +45,8 @@ export default class PurchaseProcessor {
 		this.processorsMiddlewares.forEach((processor) =>
 			processor.process(purchaseOrder)
 		)
+
+		this.customer.basket.clear()
 
 		return purchaseOrder
 	}

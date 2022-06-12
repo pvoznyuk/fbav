@@ -23,7 +23,11 @@ export default class Basket {
 		)
 	}
 
-	get totalPrice() {
+	clear() {
+		this.products = []
+	}
+
+	totalPrice() {
 		return this.products.reduce((total, item) => total + item.price, 0)
 	}
 }

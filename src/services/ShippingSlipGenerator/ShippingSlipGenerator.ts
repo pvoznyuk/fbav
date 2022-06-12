@@ -1,5 +1,5 @@
-import Customer from '../models/Customer/Customer'
-import PhysicalProduct from '../models/Product/PhysicalProduct'
+import Customer from '../../models/Customer/Customer'
+import PhysicalProduct from '../../models/Product/PhysicalProduct'
 
 export default class ShippingSlipGenerator {
 	customer: Customer

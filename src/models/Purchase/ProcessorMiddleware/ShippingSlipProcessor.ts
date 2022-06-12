@@ -1,7 +1,7 @@
 import Customer from '../../Customer/Customer'
 import PhysicalProduct from '../../Product/PhysicalProduct'
 import PurchaseOrder from '../PurchaseOrder'
-import ShippingSlipGenerator from '../../../services/ShippingSlipGenerator'
+import ShippingSlipGenerator from '../../../services/ShippingSlipGenerator/ShippingSlipGenerator'
 import AbstractPurcahseProcessorMiddleware from './AbstractPurcahseProcessorMiddleware'
 
 export default class MShippingSlipProcessor extends AbstractPurcahseProcessorMiddleware {

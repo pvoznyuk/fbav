@@ -45,8 +45,13 @@ describe('Basket', () => {
 	})
 
 	it('should calculate total price', () => {
-		expect(basket.totalPrice).toBe(13.99)
+		expect(basket.totalPrice()).toBe(13.99)
 		basket.addItem(new Book('4', 'The Hobbit', 10.01))
-		expect(basket.totalPrice).toBe(24.0)
+		expect(basket.totalPrice()).toBe(24.0)
+	})
+
+	it('should clear the basket', () => {
+		basket.clear()
+		expect(basket.products.length).toBe(0)
 	})
 })

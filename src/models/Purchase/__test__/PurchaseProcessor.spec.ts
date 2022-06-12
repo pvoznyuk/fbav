@@ -30,7 +30,7 @@ describe('PurchaseProcessor', () => {
 		purchaseProcessor = new PurchaseProcessor(customer)
 		purcaseOrder = new PurchaseOrder(
 			customer.id,
-			customer.basket.totalPrice,
+			customer.basket.totalPrice(),
 			[
 				'Book "Alice in Wonderland"',
 				'Book "The Hobbit"',
@@ -54,7 +54,7 @@ describe('PurchaseProcessor', () => {
 		const nextPurcahseOrdrer = purchaseProcessor.process()
 		expect(nextPurcahseOrdrer).toBeInstanceOf(PurchaseOrder)
 		expect(nextPurcahseOrdrer.customerId).toBe(customer.id)
-		expect(nextPurcahseOrdrer.totalPrice).toBe(customer.basket.totalPrice)
+		expect(nextPurcahseOrdrer.totalPrice).toBe(23.5)
 		expect(nextPurcahseOrdrer.itemLines).toEqual([
 			'Book "Alice in Wonderland"',
 			'Book "The Hobbit"',
@@ -72,6 +72,11 @@ describe('PurchaseProcessor', () => {
 		const nextPurcaseOrder = purchaseProcessor.process()
 		expect(shippingProcessorSpy).toHaveBeenCalled()
 		expect(nextPurcaseOrder.shippingSlip).toBeTruthy()
+	})
+
+	it("should clear the customer's basket after processing the purchase", () => {
+		purchaseProcessor.process()
+		expect(customer.basket.products).toEqual([])
 	})
 
 	it('should throw error when trying to purchase an empty basket', () => {

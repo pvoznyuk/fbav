@@ -5,12 +5,5 @@ const config: Config.InitialOptions = {
 	transform: {
 		'^.+\\.ts$': 'ts-jest',
 	},
-	collectCoverage: true,
-	collectCoverageFrom: ['./src/**'],
-	coverageThreshold: {
-		global: {
-			lines: 90,
-		},
-	},
 }
 export default config

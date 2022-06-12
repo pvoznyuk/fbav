@@ -28,7 +28,7 @@ describe('MembershipActivatorProcessor', () => {
 		customer = new Customer('uid', 'Jorge Luis Borges', [], mockProducts)
 		purcaseOrder = new PurchaseOrder(
 			customer.id,
-			customer.basket.totalPrice,
+			customer.basket.totalPrice(),
 			[]
 		)
 		membershipActivatorProcessor = new MembershipActivatorProcessor(

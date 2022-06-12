@@ -8,26 +8,43 @@ FunBooksAndVideos is an e-commerce shop where customers can view books and watch
 
 A purchase order can contain products or membership requests. A purchase order has an PO ID, a customer ID and total price. There is an item line in the purchase order per product purchased (product, membership type). One example of a purchase order is the following:
 
-- Purchase Order: 3344656 Total: 48.50
-- Customer: 4567890
-- Item lines:
-  - Video "Comprehensive First Aid Training"
-  - Book "The Girl on the train"
-  - Book Club Membership
+-   Purchase Order: 3344656 Total: 48.50
+-   Customer: 4567890
+-   Item lines:
+    -   Video "Comprehensive First Aid Training"
+    -   Book "The Girl on the train"
+    -   Book Club Membership
 
 ## Business Rules
 
 Several business rules are applied when a purchase order is processed. Some of the business rules are shown in this list:
-- **BR1**. If the purchase order contains a membership, it has to be activated in the customer account immediately.
-- **BR2**. If the purchase order contains a physical product a shipping slip has to be generated.
+
+-   **BR1**. If the purchase order contains a membership, it has to be activated in the customer account immediately.
+-   **BR2**. If the purchase order contains a physical product a shipping slip has to be generated.
 
 ## Tasks
-- Implement an Object Oriented model of the system
--  Design a flexible purchase order processor
--  Implement the above business rules
 
-*credits: Code Kata adapted from Dave Thomas*
+-   Implement an Object Oriented model of the system
+-   Design a flexible purchase order processor
+-   Implement the above business rules
 
-## Implementation
+_credits: Code Kata adapted from Dave Thomas_
 
+## How to run
 
+### Installation
+
+`git clone https://github.com/pvoznyuk/fbav.git`
+`npm install`
+
+### Run Unit Tests
+
+It also outputs test coverage.
+
+`npm test`
+
+### Run [sort of] end-to-end test
+
+It is actually an emulation of e2e,
+
+`npm run e2e`
