@@ -1,5 +1,4 @@
 import Book from '../Book'
-import { ProductType } from '../Product'
 import PhysicalProduct from '../PhysicalProduct'
 
 describe('Book', () => {
@@ -22,6 +21,6 @@ describe('Book', () => {
 	})
 
 	it('should have a book product type', () => {
-		expect(book.productType).toBe(ProductType.BOOK)
+		expect(book.productType).toBe('Book')
 	})
 })

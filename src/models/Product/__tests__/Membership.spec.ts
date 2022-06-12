@@ -1,5 +1,4 @@
 import Membership, { MembershipType } from '../Membership'
-import { ProductType } from '../Product'
 import DigitalProduct from '../DigitalProduct'
 
 describe('Membership', () => {
@@ -27,6 +26,6 @@ describe('Membership', () => {
 	})
 
 	it('should have a membership product type', () => {
-		expect(membership.productType).toBe(ProductType.MEMBERSHIP)
+		expect(membership.productType).toBe('Membership')
 	})
 })

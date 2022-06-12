@@ -1,5 +1,4 @@
 import Video from '../Video'
-import { ProductType } from '../Product'
 import DigitalProduct from '../DigitalProduct'
 
 describe('Video', () => {
@@ -22,6 +21,6 @@ describe('Video', () => {
 	})
 
 	it('should have a video product type', () => {
-		expect(video.productType).toBe(ProductType.VIDEO)
+		expect(video.productType).toBe('Video')
 	})
 })

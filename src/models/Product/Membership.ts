@@ -1,5 +1,4 @@
 import DigitalProduct from './DigitalProduct'
-import { ProductType } from './Product'
 
 export enum MembershipType {
 	BOOKS = 'Book Club',
@@ -8,7 +7,6 @@ export enum MembershipType {
 }
 
 export default class Membership extends DigitalProduct {
-	productType = ProductType.MEMBERSHIP
 	membershipType: MembershipType
 
 	constructor(
@@ -19,5 +17,9 @@ export default class Membership extends DigitalProduct {
 	) {
 		super(id, name, price)
 		this.membershipType = membershipType
+	}
+
+	get productType(): string {
+		return 'Membership'
 	}
 }

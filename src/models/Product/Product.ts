@@ -1,14 +1,7 @@
-export enum ProductType {
-	BOOK = 'Book',
-	VIDEO = 'Video',
-	MEMBERSHIP = 'Membership',
-}
-
 export default abstract class Product {
 	id: string
 	name: string
 	price: number
-	productType: ProductType
 	isPhysical: boolean
 
 	constructor(id: string, name: string, price: number) {
@@ -16,4 +9,6 @@ export default abstract class Product {
 		this.name = name
 		this.price = price
 	}
+
+	abstract get productType(): string
 }
