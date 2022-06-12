@@ -16,10 +16,6 @@ describe('Video', () => {
 		expect(video).toBeInstanceOf(DigitalProduct)
 	})
 
-	it('should not be a physical product', () => {
-		expect(video.isPhysical).toBeFalsy()
-	})
-
 	it('should have a video product type', () => {
 		expect(video.productType).toBe('Video')
 	})

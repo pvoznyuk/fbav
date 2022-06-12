@@ -16,10 +16,6 @@ describe('Book', () => {
 		expect(book).toBeInstanceOf(PhysicalProduct)
 	})
 
-	it('should be a physical product', () => {
-		expect(book.isPhysical).toBeTruthy()
-	})
-
 	it('should have a book product type', () => {
 		expect(book.productType).toBe('Book')
 	})
