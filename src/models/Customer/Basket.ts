@@ -3,7 +3,7 @@ import Product from '../Product/Product'
 export default class Basket {
 	products: Product[] = []
 
-	constructor(products = []) {
+	constructor(products: Product[]) {
 		this.products = products
 	}
 

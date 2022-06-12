@@ -59,4 +59,9 @@ describe('PurchaseOrder', () => {
 	it('should have a customer id', () => {
 		expect(purchaseOrder.customerId).toBe(customer.id)
 	})
+
+	it('should add a shipping slip', () => {
+		purchaseOrder.addShippingSlip('123')
+		expect(purchaseOrder.shippingSlip).toBe('123')
+	})
 })

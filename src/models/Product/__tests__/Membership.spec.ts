@@ -22,7 +22,7 @@ describe('Membership', () => {
 		expect(membership).toBeInstanceOf(DigitalProduct)
 	})
 
-	it('should not be a physical producy', () => {
+	it('should not be a physical product', () => {
 		expect(membership.isPhysical).toBeFalsy()
 	})
 

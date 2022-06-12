@@ -7,18 +7,14 @@ export default class PurchaseOrder {
 	itemLines: string[]
 	shippingSlip?: string
 
-	constructor(
-		customerId: string,
-		totalPrice: number,
-		itemLines: string[],
-		shippingSlip?: string
-	) {
-		this.id = Math.floor(Math.random() * 10000).toString() // TODO: generate id from uuid
+	constructor(customerId: string, totalPrice: number, itemLines: string[]) {
+		this.id = Math.floor(Math.random() * 10000).toString() // TODO: generate a unique id
 		this.customerId = customerId
 		this.totalPrice = totalPrice
 		this.itemLines = itemLines
-		if (shippingSlip) {
-			this.shippingSlip = shippingSlip
-		}
+	}
+
+	addShippingSlip(shippingSlip: string) {
+		this.shippingSlip = shippingSlip
 	}
 }

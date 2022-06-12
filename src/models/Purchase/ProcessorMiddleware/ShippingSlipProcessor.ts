@@ -19,9 +19,12 @@ export default class MShippingSlipProcessor extends AbstractPurcahseProcessorMid
 		)
 
 		if (physicalItems.length) {
-			purchaseOrder.shippingSlip = this.shippingSlipGenerator.generate(
+			const shippingSlip = this.shippingSlipGenerator.generate(
 				physicalItems as PhysicalProduct[]
 			)
+			if (shippingSlip) {
+				purchaseOrder.addShippingSlip(shippingSlip)
+			}
 		}
 
 		return purchaseOrder

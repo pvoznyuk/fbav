@@ -1,4 +1,3 @@
-import Basket from '../src/models/Customer/Basket'
 import Customer from '../src/models/Customer/Customer'
 import Membership, { MembershipType } from '../src/models/Product/Membership'
 import Book from '../src/models/Product/Book'
@@ -7,12 +6,10 @@ import PurchaseOrder from '../src/models/Purchase/PurchaseOrder'
 
 describe('Store experience', () => {
 	let customer: Customer
-	let basket: Basket
 	let purchaseProcessor: PurchaseProcessor
 	let purcahseOrdrer: PurchaseOrder
 
 	beforeAll(() => {
-		basket = new Basket()
 		customer = new Customer('a', 'Jorge Luis Borges')
 		purchaseProcessor = new PurchaseProcessor(customer)
 	})
