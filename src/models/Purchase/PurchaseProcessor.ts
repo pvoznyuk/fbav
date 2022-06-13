@@ -1,5 +1,4 @@
 import Customer from '../Customer/Customer'
-import ShippingSlipGenerator from '../../services/ShippingSlipGenerator/ShippingSlipGenerator'
 import PurchaseOrder from './PurchaseOrder'
 import MembershipActivatorProcessor from './ProcessorMiddleware/MembershipActivatorProcessor'
 import ShippingSlipProcessor from './ProcessorMiddleware/ShippingSlipProcessor'
@@ -7,12 +6,10 @@ import AbstractPurcahseProcessorMiddleware from './ProcessorMiddleware/AbstractP
 
 export default class PurchaseProcessor {
 	customer: Customer
-	shippingSlipGenerator: ShippingSlipGenerator
 	processorsMiddlewares: AbstractPurcahseProcessorMiddleware[] = []
 
 	constructor(customer: Customer) {
 		this.customer = customer
-		this.shippingSlipGenerator = new ShippingSlipGenerator(this.customer)
 
 		// [BR1] If the purchase order contains a membership,
 		// it has to be activated in the customer account immediately.
