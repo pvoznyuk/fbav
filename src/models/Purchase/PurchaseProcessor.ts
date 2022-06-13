@@ -2,11 +2,11 @@ import Customer from '../Customer/Customer'
 import PurchaseOrder from './PurchaseOrder'
 import MembershipActivatorProcessor from './ProcessorMiddleware/MembershipActivatorProcessor'
 import ShippingSlipProcessor from './ProcessorMiddleware/ShippingSlipProcessor'
-import AbstractPurcahseProcessorMiddleware from './ProcessorMiddleware/AbstractPurcahseProcessorMiddleware'
+import PurcahseProcessorMiddleware from './ProcessorMiddleware/PurcahseProcessorMiddleware'
 
 export default class PurchaseProcessor {
 	customer: Customer
-	processorsMiddlewares: AbstractPurcahseProcessorMiddleware[] = []
+	processorsMiddlewares: PurcahseProcessorMiddleware[] = []
 
 	constructor(customer: Customer) {
 		this.customer = customer

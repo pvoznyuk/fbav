@@ -1,7 +1,7 @@
 import Customer from '../../Customer/Customer'
 import PurchaseOrder from '../PurchaseOrder'
 
-export default abstract class AbstractPurcahseProcessorMiddleware {
+export default abstract class PurcahseProcessorMiddleware {
 	customer: Customer
 
 	constructor(customer: Customer) {

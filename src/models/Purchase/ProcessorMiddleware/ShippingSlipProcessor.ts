@@ -2,9 +2,9 @@ import Customer from '../../Customer/Customer'
 import PhysicalProduct from '../../Product/PhysicalProduct'
 import PurchaseOrder from '../PurchaseOrder'
 import ShippingSlipGenerator from '../../../services/ShippingSlipGenerator/ShippingSlipGenerator'
-import AbstractPurcahseProcessorMiddleware from './AbstractPurcahseProcessorMiddleware'
+import PurcahseProcessorMiddleware from './PurcahseProcessorMiddleware'
 
-export default class MShippingSlipProcessor extends AbstractPurcahseProcessorMiddleware {
+export default class ShippingSlipProcessor extends PurcahseProcessorMiddleware {
 	customer: Customer
 	shippingSlipGenerator: ShippingSlipGenerator
 

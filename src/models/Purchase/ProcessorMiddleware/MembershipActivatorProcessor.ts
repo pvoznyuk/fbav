@@ -2,9 +2,9 @@ import Customer from '../../Customer/Customer'
 import Membership from '../../Product/Membership'
 import PurchaseOrder from '../PurchaseOrder'
 import MembershipActivatorFactory from '../../../services/MembershipActivator/MembershipActivatorFactory'
-import AbstractPurcahseProcessorMiddleware from './AbstractPurcahseProcessorMiddleware'
+import PurcahseProcessorMiddleware from './PurcahseProcessorMiddleware'
 
-export default class MembershipActivatorProcessor extends AbstractPurcahseProcessorMiddleware {
+export default class MembershipActivatorProcessor extends PurcahseProcessorMiddleware {
 	customer: Customer
 	membershipActivatorFactory: MembershipActivatorFactory
 
