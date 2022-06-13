@@ -2,13 +2,13 @@ import Membership, { MembershipType } from '../Membership'
 import DigitalProduct from '../DigitalProduct'
 
 describe('Membership', () => {
-	let bookClumMembership = new Membership(
+	let bookClubMembership = new Membership(
 		'1',
 		'Book Club Membership',
 		10.0,
 		MembershipType.BOOKS
 	)
-	let videoClumMembership = new Membership(
+	let videoClubMembership = new Membership(
 		'2',
 		'Video Club Membership',
 		10.0,
@@ -22,8 +22,8 @@ describe('Membership', () => {
 	)
 
 	it('should have a title', () => {
-		expect(bookClumMembership.name).toBe('Book Club Membership')
-		expect(videoClumMembership.name).toBe('Video Club Membership')
+		expect(bookClubMembership.name).toBe('Book Club Membership')
+		expect(videoClubMembership.name).toBe('Video Club Membership')
 		expect(premiumMembership.name).toBe('Premium Membership')
 	})
 
@@ -32,14 +32,14 @@ describe('Membership', () => {
 	})
 
 	it('should have a membership product type', () => {
-		expect(bookClumMembership.productType).toBe('Membership')
-		expect(videoClumMembership.productType).toBe('Membership')
+		expect(bookClubMembership.productType).toBe('Membership')
+		expect(videoClubMembership.productType).toBe('Membership')
 		expect(premiumMembership.productType).toBe('Membership')
 	})
 
 	it('should return the membership typ', () => {
-		expect(bookClumMembership.membershipType).toBe(MembershipType.BOOKS)
-		expect(videoClumMembership.membershipType).toBe(MembershipType.VIDEOS)
+		expect(bookClubMembership.membershipType).toBe(MembershipType.BOOKS)
+		expect(videoClubMembership.membershipType).toBe(MembershipType.VIDEOS)
 		expect(premiumMembership.membershipType).toBe(MembershipType.PREMIUM)
 	})
 })
