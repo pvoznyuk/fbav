@@ -6,8 +6,8 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"test": "jest --collectCoverage=true --collectCoverageFrom=\"./src/**\"",
-        "e2e": "jest ./e2e"
+		"test": "jest ./src/** --collectCoverage=true --collectCoverageFrom=\"./src/**\"",
+        "e2e": "jest ./e2e/**"
 	},
 	"devDependencies": {
 		"@types/jest": "^28.1.1",
